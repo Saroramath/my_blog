@@ -6,13 +6,19 @@
  */
 
 import React from "react"
+//import Helmet from 'react-helmet';
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+//import theme from '../../config/Theme';
+//import styled, { ThemeProvider, injectGlobal } from 'styled-components';
+
 
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+
+
+ const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -44,7 +50,13 @@ const Layout = ({ children }) => {
       </div>
     </>
   )
-}
+} 
+
+
+
+
+
+
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
